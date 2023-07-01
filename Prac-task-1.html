@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prac-Task-1</title>
+  
+</head>
+  <body>
+    <div id="all">
+      <h4>Enter a Number : <input type="text" id="num1" /></h4>
+      <h4>Enter a Number : <input type="text" id="num2" /></h4>
+      <button onclick="performOperation('+')">Addition</button>
+      <button onclick="performOperation('-')">Subtraction</button>
+      <button onclick="performOperation('*')">Multiplication</button>
+      <button onclick="performOperation('/')">Division</button>
+      <br>
+      <br/>
+      <span id="msg_box"><label id="msg"></label></span>
+    </div>
+    <script>
+      function performOperation(operator) {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+
+        if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("msg").innerHTML =
+            "* Please enter valid numbers";
+          document.getElementById("msg").style.color = "red";
+        
+        } else {
+          var result;
+          switch (operator) {
+            case "+":
+              result = num1 + num2;
+              break;
+            case "-":
+              result = num1 - num2;
+              break;
+            case "*":
+              result = num1 * num2;
+              break;
+            case "/":
+              result = num1 / num2;
+              break;
+          }
+          document.getElementById("msg").innerHTML = "Result: " + result;
+          document.getElementById("msg").style.color = "black";
+        }
+      }
+    </script>
+  </body>
+</html>
