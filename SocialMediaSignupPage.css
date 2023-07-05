@@ -31,3 +31,25 @@ input[type="email"],
 input[type="radio"] {
     margin-right: 5px;
 }
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.error {
+    color: red;
+}
+
+.terms {
+    margin-top: 10px;
+}
+.terms label {
+    display: inline;
+    color: #555;
+}
