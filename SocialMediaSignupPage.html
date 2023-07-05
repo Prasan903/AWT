@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h2>Social Media Signup</h2>
-        <form id="signupForm" onsubmit="validateForm(event)">
+        <form id="form" onsubmit="validateForm(event)">
         <label for="fullname">Full Name:</label>
             <input type="text" id="fullname" name="fullname" required>
             <span id="fullnameError" class="error"></span>
@@ -20,12 +20,12 @@
             <span id="usernameError" class="error"></span>
 
         <label for="Password">Enter Password</label>
-            <input type="password" id="Password" name="Password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{6,10}$" required>
+            <input type="password" id="Password" name="Password"  required>
             <span id="passwordError" class="error"></span>
 
-        <label for="confirm-password">Confirm Password</label>
+        <label for="confirmpassword">Confirm Password</label>
             <input type="password" name="confirm-password" id="confirm-password" required>
-            <span id="confirm-passwordError" class="error"></span>
+            <span id="confirmpasswordError" class="error"></span>
         
         <label>Gender:</label>
         <label for="gender-male">Male</label>
@@ -35,7 +35,8 @@
         <label for="other">Other</label>
             <input type="radio" id="other" name="gender" value="other" required>
         <span id="GenderError" class="error"></span>
-        <label for="Phone No">Phone No</label>
+
+        <label for="Phone_No">Phone No</label>
             <input type="tel" name="Phone" id="Phone" pattern="[0-9]{10}" required>
         
         <label for="email">Email:</label>
